@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorAccent"
+        android:text="Quản Lí Công Việc Hàng Tuần"
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Công Việc"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"
+
+                />
+            <EditText
+                android:layout_weight="1"
+                android:id="@+id/edt_CongViec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nội Dung"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"
+
+                />
+            <EditText
+                android:id="@+id/edt_Noidung"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+           >
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ngày HT"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_ngayHT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="chọn ngày"
+                android:textColor="@color/colorXanhNhe"
+                />
+            <Button
+
+                android:id="@+id/btn_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Date"
+                android:onClick="showDate"
+                android:textAllCaps="false"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            >
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Giờ HT"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_gioHT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="chọn giờ"
+                android:textColor="@color/colorXanhNhe"
+                />
+            <Button
+                android:id="@+id/btn_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Time"
+                android:textAllCaps="false"
+                android:onClick="showTime"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorDuongke"
+            />
+        <Button
+            android:id="@+id/btn_themCV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm CV"
+            android:textAllCaps="false"
+            android:layout_gravity="center_horizontal"
+            android:onClick="AddCongViec"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Danh sách công việc"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"/>
+
+        <ListView
+            android:id="@+id/lv_CongViec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
